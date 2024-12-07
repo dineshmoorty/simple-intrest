@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Words Converter</title>
+</head>
+<body>
+    <h1>Number to Words Converter</h1>
+    <label for="numberInput">Enter number:</label>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <p id="output"></p>
+    <script >
+      document.addEventListener('DOMContentLoaded', function() {
+    const numberInput = document.getElementById('numberInput');
+    const outputElement = document.getElementById('output');
+
+    // Add input event listener to the input field
+    numberInput.addEventListener('input', function() {
+        const number = parseInt(numberInput.value, 10);
+        if (isNaN(number)) {
+            outputElement.textContent = "";
+        } else {
+            outputElement.textContent = convertNumberToWords(number);
+        }
+    });
+
+    // Function to convert number to words
+    function convertNumberToWords(number) {
+        const singleDigits = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+        const twoDigits = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+        const teens = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+
+        if (number < 10) {
+            return singleDigits[number];
+        } else if (number < 20) {
+            return teens[number - 10];
+        } else if (number < 100) {
+            return twoDigits[Math.floor(number / 10)] + (number % 10 !== 0 ? " " + singleDigits[number % 10] : "");
+        } else if (number < 1000) {
+            return singleDigits[Math.floor(number / 100)] + " Hundred" + (number % 100 !== 0 ? " and " + convertNumberToWords(number % 100) : "");
+        } else if (number < 1000000) {
+            return convertNumberToWords(Math.floor(number / 1000)) + " Thousand" + (number % 1000 !== 0 ? " " + convertNumberToWords(number % 1000) : "");
+        } else {
+            return "Number too large";
+        }
+    }
+});
+
+    </script>
+</body>
+</html>

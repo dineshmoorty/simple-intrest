@@ -1,0 +1,77 @@
+.container{
+  border-radius: 10px;
+}
+h2{
+  text-align: center;
+  padding: 0.5em;
+  padding-bottom: 1em;
+}
+.calculation-group{
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+label{
+  display: flex;
+}
+.amount{
+  font-size: 18px;
+  padding-bottom: 0.5em;
+  font-weight: 500;
+}
+.Intrest{
+  padding-top: 1em;
+  font-size: 18px;
+  padding-bottom: 0.5em;
+  font-weight: 500;
+}
+.input-principal{
+  padding: 0.8em 0.7em;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+.int{
+  padding-top: 0.2em;
+  font-weight: 500;
+  font-size: 16px;
+}
+.error{
+  font-size: 17px;
+  color: red;
+  font-weight: 500;
+}
+.calculate{
+  margin-top: 0.8em;
+  padding: 1em;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 0.5em;
+  background-color: rgba(0, 128, 0, 0.679);
+  color: white;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.calculate:active{
+  background-color: green;
+}
+.clear{
+  margin-left: 1.2em;
+  padding: 0.5em 2em;
+  border: none;
+  border-radius: 0.4em;
+  background-color: rgba(255, 0, 0, 0.767);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.clear:active{
+  background-color: rgb(255, 0, 0);
+}

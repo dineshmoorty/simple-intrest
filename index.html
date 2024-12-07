@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/general.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <script src="./src/index.js"></script>
+  <title>Simple Intreset</title>
+</head>
+<body>
+  <main>
+    <section class="SI">
+      <h2>Simple Intreset Calculation</h2>
+      <div class="container">
+        <div class="calculation-group">
+            <label class="amount">Enter Principal Amount</label>
+            <input type="text" placeholder="Principal Amount" class="input-principal input-js clear-input-js" id="inputField">
+            <label class="Intrest"> Intrest Rate ( % )</label>
+            <input type="text" placeholder="Intreset Rate at %" class="input-principal intrest-js clear-input-js2">
+            <label class="Intrest"> Tenure </label>
+            <input type="text" placeholder="Tenure in Months" class="input-principal tenure-js clear-input-js2">
+            <p class="principal int clear-js3"></p>
+            <p class="intrest-amount int clear-js1" ></p>
+            <p class="emi int clear-js2" ></p>
+            <p class="error error-js"></p>
+            <button class="calculate" onclick="calculateamount()">Calculate</button>
+        </div>
+        <button class="clear" onclick="clearinput()">clear</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
